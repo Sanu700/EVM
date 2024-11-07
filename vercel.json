@@ -5,7 +5,7 @@
     { "src": "arrow.png", "use": "@vercel/static" },
     { "src": "red.png", "use": "@vercel/static" },
     { "src": "shiv sena.png", "use": "@vercel/static" },
-    { "src": "whatsapp-share-button-icon", "use": "@vercel/static" },
+    { "src": "whatsapp-share-button-icon.png", "use": "@vercel/static" },
     { "src": "1.mp3", "use": "@vercel/static" },
     { "src": "2.mp3", "use": "@vercel/static" },
     { "src": "error.mp3", "use": "@vercel/static" },
