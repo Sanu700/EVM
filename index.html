@@ -112,17 +112,14 @@
             १००-घनसावंगी  विधानसभेची निवडणूक -२०२४<br>
             डमी मतदान यंत्र
         </div>
-        <div style="width:100%;">
-            <div class="buttonIntro" style="width:80% !important; text-align:center; margin:0 auto; margin-bottom:20px;font-family: Akshar, sans-serif; font-size:3vw">डेमो मतदानासाठी धनुष्यबाण निशाणी समोरील निळे बटण दाबावे</div>
-                </div>
-                <div style="width:100%; margin-top: 40px; display: flex; justify-content: center; align-items: center;">
-    <div style="width:90%; text-align:center; font-family: Akshar, sans-serif; font-size:4vw; display: flex; align-items: center;">
-        <span style="background-color:#ff6634; padding: 10px; color: #ffffff; font-weight: bold; font-size:4vw; border-radius: 10px; width: 60%;">मतदानाच्या दिवशी सुद्धा धनुष्यबाणा समोरील निळे बटण दाबावे</span>
-        <img id="wimage" src="whatsapp-share-button-icon.png" style="width:30%; padding-left:20px; padding-top: 1vw;">
-        <img id="simage">
+        <div style="display: flex; align-items: center; justify-content: center; margin-top: 40px;">
+    <div style="background-color: #ff6634; padding: 10px; color: #ffffff; font-weight: bold; font-size: 4vw; display: inline-block; border-radius: 10px; text-align: center;">
+        मतदानाच्या दिवशी सुद्धा धनुष्यबाणा समोरील निळे बटण दाबावे
+    </div>
+    <div style="margin-left: 10px;">
+        <img id="wimage" src="whatsapp-share-button-icon.png" style="width: 50px; height: 50px; cursor: pointer;">
     </div>
 </div>
-
 
             <table style="margin:0 auto; width:98%; text-align:center; border-collapse: collapse; font-family: Akshar, sans-serif; font-size:4vw">
                 <tbody><tr>
@@ -363,6 +360,12 @@
                 
             </tbody></table>
             </form>
+            <div>
+                <p id="visitor-count">Visitors: 0</p>
+                <p id="vote-count">Votes: 0</p>
+                <button onclick="countVote()">Vote</button>
+            </div>
+            
     
          <!-- Add jQuery from Google's CDN -->
          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -461,6 +464,26 @@
          });
          
          });
+         // Visitor Counter
+if (!sessionStorage.getItem('visited')) {
+    let visitorCount = localStorage.getItem('visitorCount') || 0;
+    visitorCount++;
+    localStorage.setItem('visitorCount', visitorCount);
+    sessionStorage.setItem('visited', 'true');
+}
+
+document.getElementById('visitor-count').textContent = `Visitors: ${localStorage.getItem('visitorCount')}`;
+ // Vote Counter
+function countVote() {
+    let voteCount = localStorage.getItem('voteCount') || 0;
+    voteCount++;
+    localStorage.setItem('voteCount', voteCount);
+    document.getElementById('vote-count').textContent = `Votes: ${voteCount}`;
+}
+
+// Display the initial vote count on page load
+document.getElementById('vote-count').textContent = `Votes: ${localStorage.getItem('voteCount') || 0}`;
+
          </script>
              
     </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
