@@ -1,0 +1,101 @@
+#rcorners1 {
+    border-radius: 8px;
+    background: #393186;
+    
+    width: 100%;
+    height: 50px;  
+  }
+  
+          .button {
+    text-align: center;
+    height: 65px;
+    width: 20%;
+    line-height: 65px;
+    cursor: pointer;
+    font-size: 22px;
+    text-transform: uppercase;
+    /*letter-spacing: 4px;*/
+    color: #F0F0F0;
+    border-radius: 30px;
+  
+    /*4F0044*/
+    border-bottom: 4px solid #4D43B2;
+    box-shadow: 6px 6px 6px #999;
+    user-select: none;
+    background: #393186;
+    transition: background 0.05s linear;
+    transition: all .05s linear;
+  
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+  
+  .button:active {
+    box-shadow: 2px 2px 2px #777;
+    border-bottom: 1px solid #FFB909;
+    transform: translateY(3px);
+  }
+  .red-arrow {
+    filter: hue-rotate(180deg); /* This makes the arrow red */
+}
+
+  
+   .buttonCorrect {
+    text-align: center;
+    height: 65px;
+    width: 20%;
+    line-height: 65px;
+    cursor: pointer;
+    font-size: 22px;
+    text-transform: uppercase;
+    /*letter-spacing: 4px;*/
+    color: #F0F0F0;
+    border-radius: 30px;
+  
+    /*4F0044*/
+    border-bottom: 4px solid #4D43B2;
+    box-shadow: 6px 6px 6px #999;
+    user-select: none;
+    background: #393186;
+    transition: background 0.05s linear;
+    transition: all .05s linear;
+  
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+  
+  .buttonCorrect:active {
+    box-shadow: 2px 2px 2px #777;
+    border-bottom: 1px solid #FFB909;
+    transform: translateY(3px);
+  }
+  
+   .buttonIntro {
+    text-align: center;
+    height: 65px;
+    width: 20%;
+    line-height: 65px;
+    cursor: pointer;
+    font-size: 22px;
+    text-transform: uppercase;
+    /*letter-spacing: 4px;*/
+    color: #F0F0F0;
+    border-radius: 30px;
+  
+    /*4F0044*/
+    border-bottom: 4px solid #4D43B2;
+    box-shadow: 6px 6px 6px #999;
+    user-select: none;
+    background: #393186;
+    transition: background 0.05s linear;
+    transition: all .05s linear;
+  
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+  
+  .buttonIntro:active {
+    box-shadow: 2px 2px 2px #777;
+    border-bottom: 1px solid #FFB909;
+    transform: translateY(3px);
+  }
