@@ -1,12 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-    <link rel="icon" href="image.jpg" type="image/jpg">
-
-
-
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <title>डेमो मतदान यंत्र</title>
-        
-
+         <link rel="shortcut icon" type="image/x-icon" href="whatsapp-share-button-icon.png">
         <style>
             #rcorners1 {
       border-radius: 8px;
@@ -120,14 +115,10 @@
         <div style="width:100%;">
             <div class="buttonIntro" style="width:80% !important; text-align:center; margin:0 auto; margin-bottom:20px;font-family: Akshar, sans-serif; font-size:3vw">डेमो मतदानासाठी धनुष्यबाण निशाणी समोरील निळे बटण दाबावे</div>
                 </div>
-               <div style="width:100%;margin-top: 40px; display: flex; align-items: center; justify-content: center;">
-    <div style="background-color:#ff6634; padding: 10px; color: #ffffff; font-weight: bold; font-size:4vw; display: inline-block; width: 60%; border-radius: 10px; text-align: center;">
-        मतदानाच्या दिवशी सुद्धा धनुष्यबाणा समोरील निळे बटण दाबावे
-    </div>
-    <img id="wimage" src="whatsapp-share-button-icon.png" style="width:15%; margin-left: 10px;">
-</div>
-
-
+                <div style="width:100%;margin-top: 40px;">
+                    <div style="width:90% !important; text-align:center; margin:0 auto; margin-bottom:20px;font-family: Akshar, sans-serif; font-size:4vw">
+                    <span style="background-color:#ff6634;padding: 10px; color: #ffffff;font-weight: bold;font-size:4vw;display: inline-block;width: 60%;border-radius: 10px;">मतदानाच्या दिवशी सुद्धा धनुष्यबाणा समोरील निळे बटण दाबावे</span>  <img id="wimage" src="whatsapp-share-button-icon.png" style="width:30%;/* vertical-align:middle; */padding-left:20px;padding-top: 1vw;">
+                        <img id="simage">
         
                         
                         </div>
@@ -374,7 +365,7 @@
     
          <!-- Add jQuery from Google's CDN -->
          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-         
+        
                  <script>
                      $(document).ready(function () {
          
@@ -457,16 +448,18 @@
          
          // Share functionality for WhatsApp
          $("#wimage").click(function () {
-    // Construct the WhatsApp URL with encoded text and current page URL
-    var shareText = 'मी डेमो मतदान केले, तुम्ही केले का? ' + window.location.href;
-    var whatsappURL = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(shareText);
-
-    // Open the WhatsApp URL in a new tab
-    window.open(whatsappURL, '_blank');
-});
-
-
-
+             var image = document.getElementById('simage');
+             image.src = "whatsapp-share-button-icon.png";
+             var imageURL = image.src;
+         
+             var fakeLink = document.createElement('a');
+             fakeLink.setAttribute('href', 'https://api.whatsapp.com:/send?text=' + encodeURIComponent(window.location.href) + '%0D%0Aमी डेमो मतदान केले, तुम्ही केले का?');
+             fakeLink.setAttribute('data-action', 'share/whatsapp/share');
+             fakeLink.click();
+             image.src = "";
+         });
+         
+         });
          </script>
              
     </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
