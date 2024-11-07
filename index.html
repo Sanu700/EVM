@@ -460,16 +460,22 @@
     var image = document.getElementById('simage');
     image.src = "whatsapp-share-button-icon.png";
 
-    // Construct the WhatsApp URL
-    var shareText = 'मी डेमो मतदान केले, तुम्ही केले का? ' + window.location.href;
-    var whatsappURL = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(shareText);
+    // Wait for the image to load, then proceed
+    image.onload = function () {
+        // Construct the WhatsApp URL
+        var shareText = 'मी डेमो मतदान केले, तुम्ही केले का? ' + window.location.href;
+        var whatsappURL = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(shareText);
 
-    // Open the WhatsApp URL
-    window.open(whatsappURL, '_blank');
+        // Open the WhatsApp URL in a new tab
+        window.open(whatsappURL, '_blank');
 
-    // Reset the image source
-    image.src = "";
+        // Reset the image source after a short delay
+        setTimeout(function () {
+            image.src = "";
+        }, 500);
+    };
 });
+
 
          </script>
              
