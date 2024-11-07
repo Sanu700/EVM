@@ -87,7 +87,7 @@ $(document).ready(function () {
         fakeLink.setAttribute('href', 'https://api.whatsapp.com:/send?text=' + encodeURIComponent(window.location.href) + '%0D%0Aमी डेमो मतदान केले, तुम्ही केले का?');
         fakeLink.setAttribute('data-action', 'share/whatsapp/share');
         fakeLink.click();
-        image.src = "";
+        image.src = "whatsapp-share-button-icon.png";
     });
 
 });
