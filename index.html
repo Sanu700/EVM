@@ -460,7 +460,7 @@
          $("#errorbtn12").click(function () { changeArrowColor('errorimage12'); });
          
          // Share functionality for WhatsApp
-         $("#wimage").click(function () {
+        $("#wimage").click(function () {
     var image = document.getElementById('simage');
     image.src = "whatsapp-share-button-icon.png";
     
@@ -474,6 +474,7 @@
 
     image.src = ""; // Optional: clear the image if needed for other reasons
 });
+
 
          // Visitor Counter
 if (!sessionStorage.getItem('visited')) {
