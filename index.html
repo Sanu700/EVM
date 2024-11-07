@@ -459,18 +459,20 @@
          
          // Share functionality for WhatsApp
          $("#wimage").click(function () {
-             var image = document.getElementById('simage');
-             image.src = "whatsapp-share-button-icon.png";
-             var imageURL = image.src;
-         
-             var fakeLink = document.createElement('a');
-             fakeLink.setAttribute('href', 'https://api.whatsapp.com:/send?text=' + encodeURIComponent(window.location.href) + '%0D%0Aमी डेमो मतदान केले, तुम्ही केले का?');
-             fakeLink.setAttribute('data-action', 'share/whatsapp/share');
-             fakeLink.click();
-             image.src = "";
-         });
-         
-         });
+    var image = document.getElementById('simage');
+    image.src = "whatsapp-share-button-icon.png";
+    
+    var fakeLink = document.createElement('a');
+    fakeLink.setAttribute('href', 'https://api.whatsapp.com/send?text=' + encodeURIComponent(window.location.href) + '%0D%0Aमी डेमो मतदान केले, तुम्ही केले का?');
+    fakeLink.setAttribute('data-action', 'share/whatsapp/share');
+    fakeLink.setAttribute('target', '_blank'); // Open in new tab
+    document.body.appendChild(fakeLink); // Append to document to ensure click works in all browsers
+    fakeLink.click();
+    document.body.removeChild(fakeLink); // Clean up by removing the fake link
+
+    image.src = ""; // Optional: clear the image if needed for other reasons
+});
+
          // Visitor Counter
 if (!sessionStorage.getItem('visited')) {
     let visitorCount = localStorage.getItem('visitorCount') || 0;
