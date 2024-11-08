@@ -123,10 +123,7 @@
                         
                         </div>
                     </div>
-            <div style="text-align: center; margin-top: 20px;">
-        <button id="voteButton" style="padding: 10px 20px; font-size: 20px; cursor: pointer;">Demo Vote</button>
-        <p id="voteCountDisplay" style="font-size: 20px; margin-top: 10px;">Vote Count: Loading...</p>
-    </div>
+           
 
             <table style="margin:0 auto; width:98%; text-align:center; border-collapse: collapse; font-family: Akshar, sans-serif; font-size:4vw">
                 <tbody><tr>
@@ -463,43 +460,9 @@
              fakeLink.click();
              image.src = "";
 
-              const voteButton = document.getElementById('voteButton');
-        const voteCountDisplay = document.getElementById('voteCountDisplay');
 
         // Function to update vote count display
-        async function updateVoteCountDisplay() {
-            try {
-                const response = await fetch('/api/vote');
-                const data = await response.json();
-                voteCountDisplay.textContent = `Vote Count: ${data.voteCount}`;
-            } catch (error) {
-                voteCountDisplay.textContent = 'Failed to load vote count.';
-                console.error(error);
-            }
-        }
-
-        // Function to handle vote button click
-        async function castVote() {
-            try {
-                const response = await fetch('/api/vote', {
-                    method: 'POST'
-                });
-                const data = await response.json();
-                voteCountDisplay.textContent = `Vote Count: ${data.voteCount}`;
-            } catch (error) {
-                console.error('Error casting vote:', error);
-            }
-        }
-
-        // Event listener for the vote button
-        voteButton.addEventListener('click', castVote);
-
-        // Load initial vote count when the page loads
-        updateVoteCountDisplay();
-         });
-         
-     
-                     
+       
          </script>
              
     </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
