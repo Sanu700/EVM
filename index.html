@@ -123,6 +123,10 @@
                         
                         </div>
                     </div>
+            <div id="voteCounter" style="text-align: center; font-size: 2vw; font-weight: bold; margin-top: 20px;">
+        Demo Voting Count: <span id="voteCount">0</span>
+    </div>
+</div>
 
             <table style="margin:0 auto; width:98%; text-align:center; border-collapse: collapse; font-family: Akshar, sans-serif; font-size:4vw">
                 <tbody><tr>
@@ -458,9 +462,13 @@
              fakeLink.setAttribute('data-action', 'share/whatsapp/share');
              fakeLink.click();
              image.src = "";
+
+             voteCount += 1;
+        document.getElementById('voteCount').innerText = voteCount; // Update the displayed count
          });
          
-         });
+     
+                     
          </script>
              
     </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
