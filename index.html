@@ -102,6 +102,14 @@
       border-bottom: 1px solid #FFB909;
       transform: translateY(3px);
     }
+    /* Add this in a <style> section or CSS file */
+@media (max-width: 768px) {
+    #wshare {
+        bottom: 30px; /* Adjust as needed */
+        right: 30px; /* Adjust as needed */
+    }
+}
+
         </style>
     <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&amp;display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&amp;family=Poppins:ital,wght@0,400;0,500;0,600;0,800;1,400;1,500;1,600;1,800&amp;display=swap">
@@ -127,10 +135,11 @@
                 
                 <!-- WhatsApp Icon (fixed at the bottom right) -->
                 <!-- WhatsApp Icon (fixed at the bottom right) -->
-<a id="wshare" href="https://api.whatsapp.com/send?text=मी डेमो मतदान केले, तुम्ही केले का? %0A%0A" 
-target="_blank" style="position: fixed; bottom: 20px; right: 20px;">
- <img src="whatsapp-share-button-icon.png" style="width: 10vw; cursor: pointer;">
-</a>
+                <a id="wshare" href="https://api.whatsapp.com/send?text=मी डेमो मतदान केले, तुम्ही केले का? %0A%0A" target="_blank" 
+                style="position: fixed; bottom: 20px; right: 20px; margin: 10px;">
+                 <img src="whatsapp-share-button-icon.png" style="width: 10vw; cursor: pointer;">
+             </a>
+             
 
                 
 
