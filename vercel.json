@@ -12,7 +12,7 @@
     { "src": "error.mp3", "use": "@vercel/static" },
     { "src": "correct.mp3", "use": "@vercel/static" },
     { "src": "dada.jpg", "use": "@vercel/static" }
-    { "src": "dada(1).jpg", "use": "@vercel/static" }
+    { "src": "dada1.jpg", "use": "@vercel/static" }
   ],
   "routes": [
     { "handle": "filesystem" },
